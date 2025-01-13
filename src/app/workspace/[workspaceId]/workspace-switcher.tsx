@@ -20,7 +20,7 @@ export const WorkspaceSwitcher = () => {
     const { data: workspaces, isLoading: workspacesLoading } = useGetWorkspaces()
     const { data:workspace, isLoading: workspaceLoading } = useGetWorkspace({ id: workspaceId })
 
-    const filteredWorkspaces = workspaces?.filter((workspace) => workspace.id !== workspaceId)
+    const filteredWorkspaces = workspaces?.filter((workspace) => workspace._id !== workspaceId)
 
     return (
         <DropdownMenu>
