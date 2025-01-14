@@ -34,7 +34,7 @@ export const SignUpCard = ({ setState }: SignUpCardProps) => {
         setPending(true);
         signIn("password", { name, email, password, flow: "signUp" })
         .catch(() => {
-            setError("Something went wrong. \n Is your password 8 characters long?");
+            setError("Something went wrong. Is your password 8 characters long?");
         })
         .finally(() => {
             setPending(false);
